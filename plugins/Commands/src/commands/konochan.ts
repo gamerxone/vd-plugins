@@ -102,10 +102,6 @@ export const konoSendCommand = {
       const isNSFW = options.get("nsfw")?.value || false;
 
       // Check if channel is NSFW for NSFW content
-      if (isNSFW && !ctx.channel.nsfw) {
-        showNSFWWarning();
-        return { type: 4 };
-      }
 
       const imageUrl = await fetchImage(isNSFW);
 
